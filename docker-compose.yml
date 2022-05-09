@@ -4,18 +4,18 @@ networks:
   laravel:
 
 services:
-  site:
+  app:
     build:
       context: ./dockerfiles
       dockerfile: nginx.dockerfile
-      args:
-        - UID=${UID:-1000}
-        - GID=${GID:-1000}
+      # args:
+      #   - UID=${UID:-1000}
+      #   - GID=${GID:-1000}
     container_name: nginx
     ports:
-      - 80:80
+      - 8989:80
     volumes:
-      - ./src:/var/www/html:delegated
+      - ./src:/var/www/html
     depends_on:
       - php
       - redis

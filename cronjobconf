@@ -1,0 +1,3 @@
+* * * * *   /opt/cronjob.sh 2>&1
+9 * * * *   /opt/cronjob-sync-sitemap-from-efs.sh 2>&1
+#
